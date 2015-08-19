@@ -1,0 +1,147 @@
+.site-title {
+	text-decoration: none;
+	font-size: 18 / 16 + 0em;
+	line-height: 64/64+0em;
+
+	@media screen and (min-width: $beta_query) {
+		font-size: 25 / 16+0em;
+	}
+		
+	@media screen and (min-width: $charlie_query) {
+		color: white;
+		font-size: 30 / 16+0em;
+	}
+	a {
+		text-decoration: none;
+		color: white;
+
+		&:hover {
+			text-decoration: none;
+		}
+	}
+}
+
+.a-section__a {
+	text-decoration: none;
+	color: #333;
+
+	&.link{
+		color: #411313;
+		font-size: 0.8em;
+		margin-left: 1em;
+		text-decoration: underline;
+	}
+}
+
+.a-header__h2--header {
+	text-shadow: 4px 3px 2px rgba(0, 0, 0, 0.3); 
+	padding-top: 3rem;
+	font-size: 2rem;
+	text-align: center;
+	color: white;
+
+	@media screen and (min-width: $beta_query) {
+		font-size: 3em;
+	}
+
+	@media screen and (min-width: $charlie_query) {
+		padding: (110px 0 0px)/16+0em;
+		font-size: 6.25em;	
+	}
+}
+
+.a-section__h3 {
+	text-align: center;
+	font-size: 1.2em;
+	margin: 0 auto 1em;
+
+	@media screen and (min-width: $beta_query) {
+		font-size: 2em;
+	}
+
+	@media screen and (min-width: $charlie_query) {
+		font-size: 3em;			
+	}
+
+	&.two {}
+	&.three {
+		text-align: center;
+		@media screen and (min-width: $charlie_query) {
+			text-align: left;
+		}
+	}
+	&.four {}
+}
+
+.a-section__p {
+	text-align: left;
+	@media screen and (min-width: $charlie_query) {
+		text-align: left;
+		margin:  0 auto;
+		font-size: 1.25em;
+	}
+	&.two {
+		text-align: center;
+		@media screen and (min-width: $charlie_query) {
+			color: #333333;
+			text-align: center;
+			max-width: 48.875em;
+		}
+	}
+	&.three {
+		margin-bottom: 0;
+
+		@media screen and (min-width: $charlie_query) {
+			margin-bottom: 11em;
+		}
+	}
+	&.four {
+		@extend .two;
+	}
+}
+
+.a-section__img {
+	
+	&.two {
+		margin: 2rem auto;
+		//max-width: 100%;
+		@media screen and (min-width: $charlie_query) {
+			margin: 3.313rem auto 0;
+			//max-width: 100%;
+		}
+	}
+	&.three {
+		margin: 2rem auto;
+		max-width: 50%;
+		position: relative;
+		z-index: 100;
+		
+		@media screen and (min-width: $charlie_query) {
+			float: right;
+			max-width: 100%;
+		}
+	}
+	&.four{
+		@extend .two;
+	}	
+}
+
+.a-section__img--skugga {
+	bottom: 0;
+	left: 50%;
+	margin-left: -18%;
+	opacity: 0.5;
+	position: absolute;
+	width: 30%;
+	z-index: -3;
+
+	@media screen and (min-width: $beta_query) {
+		bottom: -6em;
+	}
+
+	@media screen and (min-width: $delta_query) {
+		bottom: -6em;
+		margin-left: -11%;
+		width: 18%;
+	}
+}

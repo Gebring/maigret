@@ -1,0 +1,243 @@
+@charset "UTF-8";
+.hej{
+	background:red;
+	height:200px;
+}
+// GLOBAL =============================================================================================================
+
+// header
+// footer
+// aside
+
+.o-global__header {
+	background: #411313;
+	min-height: 84/16+0em;
+	padding: 2.7rem 0.5rem 0 0.5rem;
+	position: relative;
+	
+	@media screen and (min-width: $charlie_query) {
+		padding: 2rem 6.250rem 0 6.250rem;
+	}
+}
+
+.o-global__footer {
+	background: #411313;
+	min-height: 155/16+0em; 
+	width: 100%
+}
+
+.o-global__footer--map {
+	height: 25%;
+}
+
+.o-global__nav {
+	font-family: 'Open Sans', sans-serif;
+
+	.m-burger {
+		@media screen and (min-width: $charlie_query) {
+			display: none;
+		}	
+	}
+}
+
+.o-global__nav--mobile {
+	background-color: rgba(255, 255, 255, 0.9);
+	display: none;
+	left: 0;
+	list-style: none;
+	position: absolute;
+	text-align: center;
+	top: 5.2em;
+	width: 100%;
+	z-index: 1000;
+
+	li{
+		border-bottom: 1px solid #411313;
+		padding: 0.7em;
+
+		&.current-menu-item a{
+			color: #FF0000;
+		}
+		
+		a{
+			color: black;
+			font-size: 1.2em;
+			display: block;
+			text-decoration: none;
+		}
+	}
+
+	@media screen and (min-width: $charlie_query) {
+		display: none;
+	}
+}
+
+.o-global__nav--desktop {
+	display:none;
+
+	@media screen and (min-width: $charlie_query) {
+		color: white;
+		display: inline;
+		float: right;
+		font-size: 1em;
+		padding: 0.7rem 0 0 0;
+		position: relative;
+		
+		li{
+			display:inline-block;
+			list-style: none;
+			padding-left: 1em;
+
+		&.current-menu-item a{
+			color: #B19C8A;
+		}
+			
+			a{
+				text-decoration: none;
+				color: white;
+
+				&:hover {
+					color: #D8D9B9;
+				}
+			}
+		}
+	}
+}	
+
+// ARTICLE =============================================================================================================
+
+.o-article__header{}
+
+.o-article__footer{}
+
+.o-article__aside{}
+
+// BLOCKS =============================================================================================================
+
+
+.o-pageSection {
+	padding: 3em 0;
+	@media screen and (min-width: $charlie_query) {
+		padding: 4em 0;
+	}
+
+	&.one { 
+		height: 260/16+0em;
+		background: no-repeat center top;  
+		@media screen and (min-width: $charlie_query) {
+			height: 394/16+0em;
+			background: no-repeat center top;
+			//padding:1.5rem 0 1.5rem;
+		}
+	}
+	&.two {}
+	
+	&.three {
+		position: relative;
+		background: #e5cfba;
+		
+		@media screen and (min-width: $charlie_query) {
+			padding: 8em 0;
+		}		
+	}
+	&.four {
+		background: white;
+		position: relative;
+		
+
+		@media screen and (min-width: $charlie_query) {
+			padding: 8em 0;
+			margin-top: -250/16+0em;
+		}
+	}
+}
+
+// COMMENTS =============================================================================================================
+
+// comment thread
+
+
+
+// SECTIONS =============================================================================================================
+
+.o-modal{
+	visibility: hidden;
+	position: fixed;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	left: 0;
+	z-index: -500;
+	background-color: transparent;
+	pointer-events: none;
+	
+	.m-modal__popup{
+		pointer-events: none;
+		z-index: -600;
+	}
+}
+
+.o-section__frame{
+	position: relative;
+}
+
+
+// WIDGETFIELDS =============================================================================================================
+
+.o-contacts{
+
+// clear by number of items / screen
+
+	.m-contacts__contact:nth-of-type(2n+1){
+		@media screen and (min-width: $beta_query) {
+			clear: both;
+		} @media screen and (min-width: $charlie_query) {
+			clear: none;
+		}
+	}
+	
+	.m-contacts__contact:nth-of-type(3n+1){
+		@media screen and (min-width: $charlie_query) {
+			clear: both;
+		} @media screen and (min-width: $delta_query) {
+			clear: none;
+		}
+	}
+	
+	.m-contacts__contact:nth-of-type(4n+1){
+		@media screen and (min-width: $delta_query) {
+			clear: both;
+		} 
+	}	
+}
+
+// ARRONDISSEMENTS =============================================================================================================
+	
+.o-arrondissements {}
+
+.wpcf7 {
+	input[type="text"],
+	input[type="email"] {
+		border-bottom: 1px dotted #333;
+		margin-top: 1.5em;
+		margin-bottom: 0.5em;
+		width: 100%;
+	}
+
+	.wpcf7-textarea {
+		background-color: #e5cfba;
+		border: 1px dotted #333;
+		border-radius: 10px;
+		margin-top: 1.5em;
+		width: 100%;
+	}
+
+	.send {
+		text-align: center;
+		margin-top: 1em;
+	}
+
+	input[type="submit"] {
+		font-size: 1em;
+	}
+}

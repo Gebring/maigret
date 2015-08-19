@@ -1,0 +1,278 @@
+/* Burger */
+
+$fill: white;
+$burgerSize: 20px;
+
+.m-burger {
+  //display: inline-block;
+  height: $burgerSize;
+  width: $burgerSize * 1.2;
+  margin-top: 0;
+  
+  span, span:before, span:after {
+    display: block;
+    width: 100%;
+    height: $burgerSize / 5;
+    background: $fill;
+    transition: all 0.5s;
+    backface-visibility: hidden;
+  }
+  
+  span {
+    position: relative;
+    margin: ($burgerSize * 2 / 5) 0 0;
+  }
+  
+  span:before, span:after {
+    position: absolute;
+    content: "";
+  }
+  
+  span:before {
+    top: $burgerSize * -2 / 5;
+  }
+  
+  span:after {
+    top: $burgerSize * 2 / 5;
+  }
+}
+
+.m-burger2.selected {
+  span:before {
+    transform: translate(0px, ($burgerSize * 2 / 5)) rotate(-90deg);
+  }
+  span:after {
+    transform: translate(0px, -($burgerSize * 2 / 5)) rotate(-90deg);
+  }
+  span {
+    transform: rotate(45deg);
+  }
+}
+
+.m-section__smoke {
+  opacity: 0.4;
+  position: absolute;
+  left: 50%;
+  margin-left: -226px;
+  top: -284px;
+  
+  img{display:none;}
+}
+
+.m-section__search {
+  cursor: pointer; 
+  display: none;
+  font-family: $bodyfont;
+  font-size: 1.5em;
+  left: 74%;
+  position: absolute;
+  top: -10%;
+  z-index: 500;
+
+  @media screen and (min-width: $charlie_query) {
+    display: inline;
+  }
+
+  .arrondissements-list__cover{
+    background-color: rgba(255, 255, 255, 0.7);
+    //background-color: #411313;
+    //border: 5px solid #411313;
+    border-radius: 5px;
+    box-shadow: 0px 2px 5px 0px rgba(0, 0, 0, 0.7);
+    display: inline-block;
+  }
+
+  ul {
+    display: none;
+    list-style: none;
+    font-family: $bodyfont;
+    font-size: 0.6em;
+    width: 25em;
+    
+    li {
+      color: #000000;
+      float: left;
+      line-height: 1.2;
+      margin: 0;
+      padding: 0.3em 0.2em;
+      width: 50%;
+
+      &:nth-child(-n+21) {
+        //background: red;
+        float: left;
+      }       
+    
+      &:hover {
+        background-color: #eeeeee;
+        border-radius: 5px;
+      }
+    }
+  }
+}
+.display-inline{
+  display: inline-block
+}
+
+.m-arron-num {
+  background: #411313;
+  color: white;
+  border-radius: 100%;
+  font-size: 0.8em;
+  padding: 1px 6px;
+  position: absolute;
+
+  &:hover {
+      background: #ffffff;
+      color: #000000;
+      cursor: pointer;
+    }
+
+  @media screen and (min-width: $beta_query) {
+    font-size: 1em;
+    padding: 1px 8px;
+  }
+
+  &.one {
+    left: 46%;
+    top: 41%;
+  }
+
+  &.two {
+    left: 47%;
+    top: 32%;
+  }
+
+  &.three {
+    left: 54%;
+    top: 38%;
+  }
+
+  &.four {
+    left: 55%;
+    top: 50%;
+  }
+
+  &.five {
+    left: 50%;
+    top: 64%;
+  }
+
+  &.six {
+    left: 43%;
+    top: 57%;
+  }
+
+  &.seven {
+    left: 36%;
+    top: 50%;
+  }
+
+  &.eight {
+    left: 34%;
+    top: 31%;
+  } 
+
+  &.nine {
+    left: 45%;
+    top: 22%;
+  }
+
+  &.ten {
+    left: 54%;
+    top: 25%;
+  }
+
+  &.eleven {
+    left: 61%;
+    top: 45%;
+  } 
+
+  &.twelve {
+    left: 66%;
+    top: 65%;
+  } 
+
+  &.thirteen {
+    left: 54%;
+    top: 80%;
+  }
+
+  &.fourteen {
+    left: 40%;
+    top: 78%;
+  }
+
+  &.fifteen {
+    left: 30%;
+    top: 68%;
+  }
+
+  &.sixteen {
+    left: 13%;
+    top: 44%;
+  }
+
+  &.seventeen {
+    left: 33%;
+    top: 12%;
+  }
+
+  &.eighteen {
+    left: 50%;
+    top: 8%;
+  }
+
+  &.nineteen {
+    left: 64%;
+    top: 14%;
+  }
+
+  &.twenty {
+    left: 71%;
+    top: 42%;
+  } 
+
+  &.plus-ten {
+    padding: 1px 4px;
+    @media screen and (min-width: $charlie_query) {
+      padding: 3px 7px;
+    }
+  }    
+}
+
+.m-arron-num-highlighted.highlighted {
+  background: white;
+  color: black;
+}
+
+.m-crime-text {
+  background-color: rgba(255, 255, 255, 0.9);
+  border-radius: 3px;
+  cursor: pointer;
+  display: none;
+  font-size: 0.8em;
+  height: auto;
+  padding: 1.7em 1em;
+  position: absolute;
+  top: 0;
+  width: 100%;
+  z-index: 1400;
+
+  @media screen and (min-width: $charlie_query) {
+    left: 15%;
+    height: auto;
+    width: 70%;
+    top: 25%;
+  }
+
+  h3 {
+    font-size: 1.5em;
+  }
+
+  .close {
+    font-size: 1.2em;
+    right: 0.6em;
+    position: absolute;
+    top: 0.3em;
+  }
+}
